@@ -1,0 +1,16 @@
+{
+    "lang": "en-us",
+    "name": "PW app",
+    "short_name": "PWA",
+    "description": "A basic application",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+      {
+          "src": "/logo512.png",
+          "sizes": "512x512"
+      }
+  ]
+  }
