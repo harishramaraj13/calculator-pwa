@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html> -->
+<style>
+      #converter {
+    /* width: 15rem; */
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 2rem 0 #0001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
+<html lang="en-US" dir="ltr">
+    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Simple Calculator</title>
+    </head>
+    <link rel="manifest" href="/manifest.json">
+    
+
+    <body>
+        <form id="converter">
+        <label for="input1">Integer 1</label>
+        <input type="text" id="input1" value="" />
+        <label for="input2">Integer 2</label>
+        <input type="text" id="input2" value="" />
+        <label for="input3">Enter action to be Performed</label>
+        
+      <select id="input3" name="input3">
+        <option value="+">Add</option>
+        <option value="-" selected>Subtract</option>
+        <option value="/">Divide</option>
+        <option value="*">Multiply</option>
+      </select>
+        <br>
+        <output name="output" id="output" for="input1 input2 input3"></output>
+       <!-- <button onclick="sendDataToiOSApp()">submit</button> -->
+        <button>submit</button> 
+      </form>
+      <script src="submit.js"></script>
+    </body>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+      }
+
+      document.querySelector('button').addEventListener('click', () => {
+      log(typeof webkit.messageHandlers.bridge.postMessage)
+    webkit.messageHandlers.bridge.postMessage('{"msg": "hello?","id": }')
+  })
+
+      </script>
+</html>
